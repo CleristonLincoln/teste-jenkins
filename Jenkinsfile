@@ -1,17 +1,31 @@
 pipeline {
     agent any
 
+    environment {
+        mavenHome = tool 'jenkins-maven'
+    }
+
+    tools {
+        jdk 'java-17'
+    }
+
     stages {
-        stage('estagio inicial') {
+
+        stage('Build'){
             steps {
-                echo 'testando'
+                bat "mvn clean install -DskipTests"
             }
         }
 
-        stage('Backend clean and build') {
+        stage('Test'){
+            steps{
+                bat "mvn test"
+            }
+        }
+
+        stage('Deploy') {
             steps {
-                echo 'tentando buildar'
-                sh 'mvn clean package'
+                bat "mvn jar:jar deploy:deploy"
             }
         }
     }
