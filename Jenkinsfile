@@ -11,7 +11,7 @@ pipeline {
         stage('Backend clean and build') {
             steps {
                 echo 'tentando buildar'
-                bat '.\\mvnw clean package'
+                sh '.\\mvnw clean package'
             }
         }
     }
