@@ -10,7 +10,7 @@ pipeline {
 
         stage('Backend clean and build') {
             steps {
-                bat 'mvn clean package -DskipTests=true'
+                bat '.\\mvnw clean package -DskipTests=true'
             }
         }
     }
