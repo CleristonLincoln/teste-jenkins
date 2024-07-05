@@ -8,9 +8,9 @@ pipeline {
             }
         }
 
-        stage('limpando projeto') {
+        stage('Backend clean and build') {
             steps {
-                bat 'mvn clean'
+                bat ' .\\mvnw clean package -DskipTests=true'
             }
         }
     }
