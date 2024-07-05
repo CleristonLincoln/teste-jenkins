@@ -29,10 +29,11 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+      /*  stage('Deploy') {
             steps {
                 sh "mvn jar:jar deploy:deploy"
             }
         }
+        */
     }
 }
