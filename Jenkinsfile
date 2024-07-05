@@ -25,13 +25,13 @@ pipeline {
 
         stage('Test'){
             steps{
-                bat "mvn test"
+                sh "mvn test"
             }
         }
 
         stage('Deploy') {
             steps {
-                bat "mvn jar:jar deploy:deploy"
+                sh "mvn jar:jar deploy:deploy"
             }
         }
     }
