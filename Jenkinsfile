@@ -10,7 +10,7 @@ pipeline {
 
         stage('Backend clean and build') {
             steps {
-                sh 'mvn clean package'
+                bat '.\\mvn clean package'
             }
         }
     }
