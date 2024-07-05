@@ -11,7 +11,7 @@ pipeline {
         stage('Backend clean and build') {
             steps {
                 echo 'tentando buildar'
-                sh 'mvnw clean package'
+                sh 'mvn clean package'
             }
         }
     }
