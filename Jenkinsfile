@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Inicial'){
             steps {
-                bat " echo testandoooooooo"
+                sh " echo testandoooooooo"
             }
         }
 
