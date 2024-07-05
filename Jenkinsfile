@@ -10,6 +10,11 @@ pipeline {
        }*/
 
     stages {
+        stage('Inicial'){
+            steps {
+                bat "testandoooooooo"
+            }
+        }
 
         stage('Build'){
             steps {
