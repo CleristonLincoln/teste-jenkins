@@ -10,7 +10,7 @@ pipeline {
 
         stage('Backend clean and build') {
             steps {
-                bat 'echo testeeeeeeeee'
+                sh 'echo testeeeeeeeee'
             }
         }
     }
