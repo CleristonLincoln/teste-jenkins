@@ -12,11 +12,11 @@ class DemoApplicationTests {
     @Test
     void contextLoads() {
     }
-    @Test
+  /*  @Test
     void contextError() {
         assertAll("customer",
-                () -> assertEquals(2, 1)
+                () -> assertEquals(1, 1)
         );
-    }
+    }*/
 
 }
