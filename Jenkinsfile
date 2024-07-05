@@ -7,7 +7,7 @@ pipeline {
 
     tools {
         maven 'jenkins-maven'
-        jdk 'Java 17.0.4.1'
+
     }
 
     stages {
