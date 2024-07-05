@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage ('estagio inicial') {
-            step{
+            steps {
                 echo testando-essa-bagaça
             }
         }
