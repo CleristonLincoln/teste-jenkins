@@ -10,7 +10,7 @@ pipeline {
 
         stage('Backend clean and build') {
             steps {
-                sh '.\\mvnw clean package'
+                sh 'echo testeeeeeeeee'
             }
         }
     }
