@@ -17,6 +17,26 @@ pipeline {
             }
         }
 
+        stage('sonar analies') {
+
+            environment {
+                scannerHome = tool 'SONAR_SCANNER'
+            }
+
+            steps {
+
+                withSonarQubeEnv('SONAR_LOCAL') {
+
+                    sh "${scannerHome}/bon/sonar-sncanner -e " +
+                            "-Dsonar.projectKey=teste-demo " +
+                            "-Dsonar.host.url=http://localhost:9000 " +
+                            "-Dsonar.java.login=sqa_4216c346426cd8788343d27d76b940230e0d575c " +
+                            "-Dsonar.java.binaries=target " +
+                            "-Dsonar.coverage.exclusions=**/.mvn"
+                }
+            }
+        }
+
         stage('Test') {
             steps {
                 sh "mvn test"
